@@ -1,0 +1,242 @@
+/*
+Theme Name: OnPeak Consulting
+Author: Ryan Reynolds
+Description: A custom theme for OnPeak Consulting
+Version: 1.0
+*/
+
+/* General CSS */
+body, h1, h2, h3, p, nav, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    color: rgb(0, 0, 0); /* Ensure main text is black for readability */
+    box-sizing: border-box; /* Added to ensure consistent styling */
+}
+
+/* Header CSS */
+header {
+    background: #ff6600; /* Dark orange */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px 0;
+    display: flex; /* Added to display buttons horizontally */
+    justify-content: center; /* Center align the buttons */
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    padding: 10px 20px; /* Increased padding for button spacing */
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+nav a:hover::before {
+    background-color: white;
+}
+
+/* Sections CSS */
+section {
+    text-align: center;
+    padding: 20px 20px; /* Increased padding for vertical spacing */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: white; /* Background set to white */
+}
+
+.image-placeholder {
+    overflow: hidden;
+    height: 800px; /* Increased image height */
+    position: relative;
+}
+
+.image-placeholder img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    transition: transform 0.3s; /* Added transition for image scaling */
+}
+
+.image-placeholder:hover img {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+
+.text-content, .image-placeholder {
+    flex: 1;
+    max-width: 45%;
+}
+
+#about, #services, #contact {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#about {
+    flex-direction: row-reverse;
+}
+
+#services, #contact {
+    flex-direction: row;
+}
+
+footer {
+    background: #cc5500; /* Darker orange */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* CTA Button CSS */
+.cta-button {
+    background-color: #ff6600; /* Dark orange */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Added margin top for button spacing */
+}
+
+.cta-button:hover {
+    background-color: #ff8533; /* Lighter orange on hover */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add space between paragraphs */
+.text-content p {
+    margin-bottom: 20px; /* Space below each paragraph */
+}
+
+/* Testimonials styling */
+.testimonials {
+    margin-top: 40px; /* Space above testimonials section */
+}
+
+.testimonial {
+    margin-bottom: 30px; /* Space between each testimonial */
+    padding-left: 20px; /* Add some padding on the left for indentation */
+    border-left: 3px solid #ff6600; /* Vertical line to the left of each testimonial */
+}
+
+.testimonial p:first-child {
+    font-style: italic; /* Italicize the testimonial text */
+    margin-bottom: 10px; /* Space between testimonial text and client name */
+}
+
+.testimonial p:last-child {
+    font-weight: bold; /* Bold the client name */
+    text-align: right; /* Align client name to the right */
+}
+
+/* Specific CSS for hero section image */
+#hero .image-placeholder {
+    height: 1000px; /* Increased height for hero image */
+}
+
+/* Contact Form Styling */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-form p {
+    width: 100%;
+    max-width: 500px; /* Set a max width for the input fields */
+    margin-bottom: 15px;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+}
+
+#contact-form textarea {
+    height: 150px;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+#contact-form button {
+    background-color: #ff6600; /* Dark orange */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: #ff8533; /* Lighter orange on hover */
+}
+
+/* Thank You Page Specific CSS */
+.thank-you-header {
+    background: #ff6600; /* Dark orange */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.thank-you-main {
+    text-align: center;
+    padding: 50px 20px;
+    background: white;
+}
+
+.thank-you-main p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.thank-you-main .cta-button {
+    display: inline-block;
+    background-color: #ff6600; /* Dark orange */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.thank-you-main .cta-button:hover {
+    background-color: #ff8533; /* Lighter orange on hover */
+}
